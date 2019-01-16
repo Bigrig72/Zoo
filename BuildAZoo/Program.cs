@@ -13,6 +13,8 @@ namespace Zoo
             bool createDragon = CreateDragon();
             bool createPegacon = CreatePegicorn();
             bool createMegaladon = CreateMegaladon();
+            bool createLochnessMonster = CreateLochnessMonster();
+            bool createHippogriff = CreateHippogriff();
 
         }
 
@@ -69,9 +71,6 @@ namespace Zoo
                 Console.WriteLine($"Pegicorn - Exception thrown: {ex.Message}");
                 return false;
             }
-
-
-
      
         }
 
@@ -105,5 +104,81 @@ namespace Zoo
                 }
             }
         }
+
+        public static bool CreateLochnessMonster()
+        {
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                try
+                {
+                    Console.WriteLine("Name the Zoo's Lochness Monster:");
+                    string name = Console.ReadLine();
+
+                    Console.WriteLine("What is the Lochness's super power?");
+                    string superPower = Console.ReadLine();
+
+
+                    LochnessMonster lochness = new LochnessMonster(superPower, name);
+
+                    int speed = lochness.SwimSpeed();
+                    bool attack = lochness.Attack();
+                    bool heal = lochness.Heal();
+
+
+                    Console.ReadKey();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Lochness - Exception thrown: {ex.Message}");
+                    return false;
+                }
+            }
+        }
+
+        public static bool CreateHippogriff()
+        {
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                try
+                {
+                    Console.WriteLine("Name the Zoo's Hippogriff:");
+                    string name = Console.ReadLine();
+
+                    Console.WriteLine("What is the Hippogriffs's super power?");
+                    string superPower = Console.ReadLine();
+
+                    Console.WriteLine("What is the Hippogriffs's wing span?");
+                    int wingSpan = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("What is the Hippogriffs's body Length?");
+                    int bodyLength = int.Parse(Console.ReadLine());
+
+
+                
+
+
+                    Hippogriff hippo = new Hippogriff(superPower, name, bodyLength, wingSpan);
+
+                    int wings = hippo.WingSpan;
+                    int body = hippo.BodyLength;
+                    bool attack = hippo.Attack();
+                    bool heal = hippo.Heal();
+
+
+                    Console.ReadKey();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Megaladon - Exception thrown: {ex.Message}");
+                    return false;
+                }
+            }
+        }
+
+
+
+
     }
 }
