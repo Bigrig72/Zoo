@@ -12,16 +12,14 @@ Abstract classes are defined from the top and works its way down to the more spe
 
 3. Polymorphism- Describes the concept that different classes can be used with the same interface
 
+## Describe what your interfaces are, where are they being implemented
+Im using IFLY and ISWIM as my two interface, you will find below in the diagram how I am implemnting them. I am using Wingspan and Flightspeed for my IFly interface, which is used for one concrete class Hippogriff and one abstract class called fantasy fliers. ISwim is being used for Hippogriff and Fantasy Swimmers, which is also abstract.
 
 ## Updated diagram with your classes and interfaces mapped out.
 ![demo](https://github.com/Bigrig72/Zoo/blob/37e645d677ddf30dc5b04d0c49e39fbc334eccd3/Zoo.jpg)
 
-## Describe what your interfaces are, where are they being implemented, and why. Provide Examples.
-Im using IFLY and ISWIM as my two interface, you will find below in the diagram how I am implemnting them. I am using Wingspan and Flightspeed for my IFly interface, which is used for one concrete class Hippogriff and one abstract class called fantasy fliers. ISwim is being used for Hippogriff and Fantasy Swimmers, which is also abstract.
-
 ## Visuals of Program
 ![Demo](https://github.com/Bigrig72/Zoo/blob/master/BuildAZoo/assets/Capture.PNG)
-
 
 ## Testing
 Unit test were done to ---
